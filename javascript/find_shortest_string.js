@@ -1,6 +1,19 @@
 function findShortestString(arr) {
-  // type your code here
+  
+  arr.forEach((string) => {
+    if (string.length > arr[0].length) {
+      return arr[0]
+    } else if (string.length === arr[0].length) {
+      return arr[0]
+    } else {
+      arr[0] = string
+    }
+  })
+
+  return arr[0];
 }
+
+
 
 if (require.main === module) {
   // add your own tests in here
